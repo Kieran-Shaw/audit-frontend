@@ -30,29 +30,23 @@ cd audit-frontend
 npm install
 ```
 
-3. Start the development server:
+3. Start the development server (using vercel):
 ```bash
-npm run dev
+vercel dev
 ```
 
 The application will be available at `http://localhost:5173`
 
 ### Building for Production
 
-To create a production build:
+When we make a PR, the build is automatically deployed to vercel first in the `preview` environment.
 
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory.
+When we merge to `main`, the build is automatically deployed to vercel in the `production` environment.
 
 ## Development
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run lint` - Run ESLint
-- `npm run preview` - Preview production build locally
+- `npm run dev` - Start development server locally without vercel
+- `vercel dev` - Start development server locally using vercel
 
 ## Project Structure
 
@@ -60,8 +54,6 @@ The built files will be in the `dist` directory.
 audit-frontend/
 ├── src/           # Source files
 ├── public/        # Static assets
-├── dist/          # Production build output
-└── node_modules/  # Dependencies
 ```
 
 ## Contributing
@@ -69,7 +61,3 @@ audit-frontend/
 1. Create a new branch for your feature
 2. Make your changes
 3. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
